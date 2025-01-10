@@ -7,7 +7,6 @@ import { RouterLink, RouterView } from 'vue-router'
       <nav>
         <RouterLink to="/">TaskList</RouterLink>
         <RouterLink to="/newTask">NewTask</RouterLink>
-        <RouterLink to="/editTask">EditTask</RouterLink>
       </nav>
 
   </header>

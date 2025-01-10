@@ -1,4 +1,7 @@
 <template>
+  <div class="h1">
+      <h1>NewTask</h1>
+  </div>
   <div class="container col-sm-12 col-md-6">
     <form @submit.prevent="addNewTask" class="task">
       <div>
@@ -47,6 +50,9 @@ export default {
 </script>
 
 <style scoped>
+.h1{
+  text-align: center;
+}
   .container{
     display: flex;
     flex-wrap: wrap;

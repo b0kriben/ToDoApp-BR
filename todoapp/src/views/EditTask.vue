@@ -1,19 +1,25 @@
 <template>
+  <div class="h1">
+      <h1>EditTask</h1>
+  </div>
   <div class="container col-sm-12 col-md-6">
     <form @submit.prevent="saveTask" class="task">
       <div>
         <label for="title">Feladat Címe:&nbsp;</label>
         <input type="text" v-model="task.title" required />
-      </div>
+      </div><br>
       <div>
-        <label for="desc">Leírás:&nbsp;</label>
+        <label for="desc">Leírás:&nbsp;</label><br>
         <textarea v-model="task.desc" required></textarea>
-      </div>
+      </div><br>
       <div>
         <label for="deadline">Határidő:&nbsp;</label>
         <input type="date" v-model="task.deadline" required />
+      </div><br>
+      <div class="footer">
+        <button type="submit">Mentés</button>
+        <button @click="menjTaskList(t.id)">Mégse</button>
       </div>
-      <button type="submit">Mentés</button>
     </form>
   </div>
 </template>
@@ -33,6 +39,11 @@ const props = defineProps({
 const route = useRoute();
 const router = useRouter();
 const store = useStore();
+
+const menjTaskList = (id)=>{
+  //<RouterLink to="/editTask">EditTask</RouterLink>
+  router.push(`/taskList/`)
+}
 
 const task = ref({
   id: props.id,
@@ -56,11 +67,18 @@ function saveTask() {
 </script>
 
 <style scoped>
+.h1{
+  text-align: center;
+}
 .container {
   display: flex;
   flex-wrap: wrap;
   gap: 5px;
 }
+.task>.footer{
+    display: flex;
+    justify-content: space-around;
+  }
 .task {
   margin: 30px;
   padding-bottom: 20px;

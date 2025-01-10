@@ -1,4 +1,7 @@
 <template>
+  <div class="h1">
+      <h1>TaskList</h1>
+  </div>
   <div class="container col-sm-12 col-md-12"><br>
     <div v-for="t in taskStore.tasks" :key="t.id" class="task">
       <p><strong>{{ t.title }}</strong></p>
@@ -30,6 +33,9 @@ const menjEdit = (id)=>{
 </script>
 
 <style scoped>
+.h1{
+  text-align: center;
+}
   .container{
     display: flex;
     flex-wrap: wrap;
