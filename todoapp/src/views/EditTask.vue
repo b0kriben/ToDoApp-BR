@@ -40,7 +40,7 @@ const route = useRoute();
 const router = useRouter();
 const store = useStore();
 
-const menjTaskList = (id)=>{
+const menjTaskList = ()=>{
   //<RouterLink to="/editTask">EditTask</RouterLink>
   router.push(`/taskList/`)
 }
