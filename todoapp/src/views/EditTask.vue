@@ -74,6 +74,7 @@ function saveTask() {
   display: flex;
   flex-wrap: wrap;
   gap: 5px;
+  justify-content: center;
 }
 .task>.footer{
     display: flex;

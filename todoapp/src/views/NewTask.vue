@@ -57,6 +57,7 @@ export default {
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
+    justify-content: center;
   }
   label{
     font-weight: bold;
